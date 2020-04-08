@@ -1,0 +1,214 @@
+:root {
+	--main: #dd600d;
+	--cstmSecondary: #8fa5b9;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: #000000bf;
+}
+
+.banner {
+	background-image: url(http://sudanow-magazine.net//images/s4s.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0.1;
+	filter: invert(1);
+}
+
+.btn-main {
+	background-color: var(--main);
+	color: #f2f2f2;
+}
+
+.text-main {
+	color: var(--main);
+}
+
+.text-cstm-secondary {
+	color: var(--cstmSecondary);
+}
+
+.bg-main {
+	background-color: var(--main);
+}
+
+.btn-main:hover {
+	background: #9c4308;
+	color: #f4f4f4;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+	outline: none;
+	border: none;
+}
+
+.navbar-toggler:hover {
+	outline: #0f0f0f;
+	background: #c8c8c8;
+	animation: swing 1s linear;
+}
+
+.main-link {
+	font-size: 105%;
+	margin-right: 0.5rem;
+}
+
+.main-link:last-child {
+	margin-right: 0;
+}
+
+.main-link:hover {
+	color: var(--main) !important;
+}
+
+.nav-logo {
+	color: rgb(221, 96, 13);
+}
+
+i.nav-logo {
+	color: rgb(241, 113, 27);
+}
+
+.nav-logo:hover {
+	animation: swing 1s linear;
+}
+
+.side-drawer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	z-index: 20;
+	background: #fff;
+	box-shadow: 1px 1px 15px #66666670;
+	height: 100vh;
+	text-align: left;
+	transition: all 0.5s;
+}
+.side-drawer ul,
+.side-drawer #overlay {
+	display: none;
+	/* position: inherit; */
+}
+
+.side-drawer ul li a {
+	color: #333;
+}
+
+.side-drawer ul li a:hover {
+	color: rgb(221, 96, 13);
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 250px;
+	width: 100%;
+	height: 100vh;
+	background: #0000002b;
+}
+
+.open-drawer ul,
+.open-drawer #overlay {
+	display: block;
+}
+
+.open-drawer.side-drawer {
+	width: 250px;
+	padding: 10px 5%;
+}
+
+#showcase {
+	background: url(https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+		center center / cover no-repeat;
+	width: 100%;
+	height: 650px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	z-index: -2;
+}
+
+#showcase .row {
+	align-self: center;
+	z-index: 4;
+	color: #efeeee;
+}
+
+#showcase .row p,
+#showcase .row button {
+	transition: all 2s linear;
+	opacity: 0.08;
+}
+
+#showcase .row p:hover,
+#showcase .row button:hover {
+	opacity: 1;
+	transition: all 3s linear;
+}
+
+#showcase-overlay {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: #000000e6;
+	height: 650px;
+	left: 0;
+}
+
+.modal {
+	padding-top: 45px;
+	background: #0000007d;
+	overflow-y: auto;
+}
+
+.border-radius {
+	border-radius: 10px;
+}
+
+footer ul li {
+	list-style: none;
+}
+
+.footer-link {
+	text-decoration: none;
+}
+
+/*********************************************/
+@keyframes swing {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(5deg);
+	}
+	50% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+/*********************************************/
+
+/* MEDIA QUERIES */
+@media (min-width: 412px) {
+	i.social-icons {
+		display: none !important;
+	}
+}
+
+@media (min-width: 576px) {
+	.modal-dialog {
+		max-width: 600px;
+	}
+}
